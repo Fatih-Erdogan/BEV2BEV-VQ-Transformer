@@ -1,0 +1,39 @@
+{
+  "model_type": "concat_conditioned",
+  "vqvae_model_dir": "logs/road_only_all/vqvae-128x128-down_to=8.0x8.0-time_wind=2-emb_size=128-n_res=2-bias=True",
+  "num_x_bins": 13,
+  "num_y_bins": 13,
+  "transformer_hid_dim": 128,
+  "transformer_blocks": 4,
+  "num_attention_heads": 4,
+  "attention_dropout": 0.1,
+  "positional_encoding_type": "sinusoidal",
+  "is_action_conditioned": true,
+  "dim_per_action": 4,
+  "num_actions_per_frame": 8,
+  "first_action_only": false,
+  "action_rnn_layers": 2,
+  "use_vq_embeddings": false,
+
+  "model_dir": "",
+  "log_dir": "logs_t",
+
+  "seed": 1,
+  "lr": 0.0003,
+  "batch_size": 128,
+  "optimizer": "adam",
+  "epochs": 100,
+
+  "data_root": "data",
+  "n_future": 10,
+  "train_on": "tiny",
+  "train_is_test": false,
+  "test_towns": ["Town02", "Town06"],
+  "train_test_ratio": 9,
+
+  "below keys will be filled according to the vqvae": null,
+  "n_past": null,
+  "channels": null,
+
+  "data_threads": 2
+}
